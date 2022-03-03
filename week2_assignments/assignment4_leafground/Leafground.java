@@ -199,13 +199,13 @@ public class Leafground {
 			ChromeDriver getDriver = new ChromeDriver();
 			
 			Leafground objLeafground = new Leafground();			
-			//objLeafground.editing(getDriver,editurl);
-			//objLeafground.buttonMethod(getDriver, buttonurl);
-			//objLeafground.dropdownMethod(getDriver, dropdownUrl);
-			//objLeafground.checkBoxMethod(getDriver,chkboxurl);
-			//objLeafground.linkMeth(getDriver,linkurl);
+			objLeafground.editing(getDriver,editurl);
+			objLeafground.buttonMethod(getDriver, buttonurl);
+			objLeafground.dropdownMethod(getDriver, dropdownUrl);
+			objLeafground.checkBoxMethod(getDriver,chkboxurl);
+			objLeafground.linkMeth(getDriver,linkurl);
 			objLeafground.imageMethod(getDriver,imageurl);
-			//getDriver.quit();
+			getDriver.quit();
 	}
 
 }
