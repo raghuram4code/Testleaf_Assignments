@@ -197,15 +197,23 @@ public class Leafground {
 			
 			WebDriverManager.chromedriver().setup();			
 			ChromeDriver getDriver = new ChromeDriver();
+			getDriver.manage().timeouts().implicitlyWait(Duration.ofMillis(600));
 			
-			Leafground objLeafground = new Leafground();			
+			Leafground objLeafground = new Leafground();		
+			System.err.println("Edit  page");
 			objLeafground.editing(getDriver,editurl);
+			System.err.println("Button  page");
 			objLeafground.buttonMethod(getDriver, buttonurl);
+			System.err.println("Dropdown  page");
 			objLeafground.dropdownMethod(getDriver, dropdownUrl);
+			System.err.println("chkbox  page");
 			objLeafground.checkBoxMethod(getDriver,chkboxurl);
+			System.err.println("Link  page");
 			objLeafground.linkMeth(getDriver,linkurl);
+			System.err.println("Image  page");
 			objLeafground.imageMethod(getDriver,imageurl);
 			getDriver.quit();
+	}
 	}
 
 }
