@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "c0235bd2-da71-4b67-9362-ca1a0d4fa24f",
+		"name": "JIRA APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All APIs",
+			"item": [
+				{
+					"name": "Search for All issues in a project using JQL",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/search?jql=project=\"AP\"",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"search"
+							],
+							"query": [
+								{
+									"key": "jql",
+									"value": "project=\"AP\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all issues Types in JIRA",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issuetype",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issuetype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List the specific issue with ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issue/10004",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								"10004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creating  an Issue in JIRA",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n    \"project\":\r\n                {\r\n                    \"key\": \"AP\"\r\n                },\r\n    \"summary\": \"create issue in RA project - Raghuram\",\r\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\r\n    \"issuetype\": {\r\n                    \"name\": \"Bug\"\r\n                }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issue/",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search issue with ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issue/10403",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								"10403"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit an issue  in JIRA with Key",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n       \r\n        \"description\": \"Issue updated via RestAssured on April 19 2022 --second time\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issue/AP-404",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								"AP-404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an issue in JIRA",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n       \r\n        \"description\": \"Issue updated via RestAssured on April 19 2022 --second time\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issue/AP-405",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								"AP-405"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assignment Week1 Day2",
+			"item": [
+				{
+					"name": "Get All the issue in JIRA",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/search?jql=project=\"AP\"",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"search"
+							],
+							"query": [
+								{
+									"key": "jql",
+									"value": "project=\"AP\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All the issue in JIRA that has been craed with in 24 hours",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/search?jql=project=AP %26 created>-24h",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"search"
+							],
+							"query": [
+								{
+									"key": "jql",
+									"value": "project=AP & created>-24h"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creating  an Issue in JIRA",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "8k3wiyMxLqvSzEBHUhEP04D7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "RestAPIJira@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n    \"project\":\r\n                {\r\n                    \"key\": \"AP\"\r\n                },\r\n    \"summary\": \"Creat issue in AP project for Assignment - Raghuram\",\r\n    \"description\": \"Creating  an issue using project keys and issue type names using the REST API\",\r\n    \"issuetype\": {\r\n                    \"name\": \"Story\"\r\n                }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restapijira.atlassian.net/rest/api/2/issue/",
+							"protocol": "https",
+							"host": [
+								"restapijira",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
